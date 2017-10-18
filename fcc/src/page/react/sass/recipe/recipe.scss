@@ -1,0 +1,84 @@
+$darkGray:#555555;
+$midGray:#999999;
+$lightGray:#eeeeee;
+$veryLightBlue:#d9edf7;
+
+@mixin border($border-color,$border-radius){
+  border:solid 2px $border-color;
+  border-radius: $border-radius;
+}
+
+.container{
+  margin:0 auto;
+  padding:0 15px;
+}
+
+.wideGray{
+  //background-color:$lightGray;
+  background-color:white;
+  width:900px;
+  padding:10px;
+  @include border($midGray,10px);
+}
+
+.listItem{
+  background-color:$veryLightBlue;
+  margin:5px;
+  padding:5px;
+  @include border($veryLightBlue,5px);
+}
+
+.listHref{
+  text-decoration: none;
+}
+
+.editPanel{
+  padding:5px;
+  background-color:white;
+  position:absolute;
+  margin:auto;
+  top:20%;
+  left:350px;
+  width :200px;
+  height:300px;
+  @include border(#33aaff,10px);
+  text-align:center;
+  z-index:99;
+}
+
+.editButton{
+  padding:3px;
+  margin:3px;
+  display:in
+}
+
+button{
+  @include border($darkGray,5px);
+  //border-style:none;
+  background-color: white;
+}
+
+button:hover{
+  @include border(red,5px);
+  //background-color:yellow;
+}
+
+button:focus{
+  @include border(red,5px);
+  outline:none;
+}
+
+.ReactModal{
+  position:fixed;
+  width:100%;
+  height:100%;
+  z-index: 10;
+  top:0px;
+  left:0px;
+  background-color:#555;
+  opacity: 0.5;
+}
+
+.hide{
+  display:none;
+}
